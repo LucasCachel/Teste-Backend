@@ -1,0 +1,29 @@
+@model MeuProjetoBackend.Models.Produto
+
+<h2>Editar Produto</h2>
+
+<form asp-controller="Produto" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label for="Nome">Nome do Produto</label>
+        <input id="Nome" name="Nome" asp-for="Nome" class="form-control" required />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Preco">Preço</label>
+        <input id="Preco" name="Preco" asp-for="Preco" class="form-control" type="number" step="0.01" required />
+        <span asp-validation-for="Preco" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Descricao">Descrição</label>
+        <textarea id="Descricao" name="Descricao" asp-for="Descricao" class="form-control" required minlength="10" maxlength="500"></textarea>
+        <span asp-validation-for="Descricao" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>
