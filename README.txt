@@ -22,7 +22,7 @@ dotnet restore
 Agora, você pode rodar o projeto localmente com o seguinte comando:
 
 dotnet run
-A aplicação estará disponível em http://localhost:5207 (ou a URL configurada no seu launchSettings.json).
+A aplicação estará disponível em http://localhost:5207/Produto ou http://localhost:5207/Swagger caso queira testar os endpoints. (ou a URL configurada no seu launchSettings.json).
 
 Instruções para Rodar as Migrações de Banco de Dados
 Este projeto usa o Entity Framework Core para gerenciar o banco de dados. Siga os passos abaixo para rodar as migrações:
